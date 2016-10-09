@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dexprotector>
+    <verbose>true</verbose>
+    <optimize>false</optimize>
+    <signMode>release</signMode>	
+    <detect>
+    	<trace>9</trace>
+      	<root>
+        	<positiveCheckCallback>com.dexprotector.detector.envchecks.MainActivity.positiveRootCheck</positiveCheckCallback>
+        	<negativeCheckCallback>com.dexprotector.detector.envchecks.MainActivity.negativeRootCheck</negativeCheckCallback>
+        	<probeMethod>com.dexprotector.detector.envchecks.MainActivity.doProbe</probeMethod>
+    	</root>
+      	<debug>
+        	<positiveCheckCallback>com.dexprotector.detector.envchecks.MainActivity.positiveDebugCheck</positiveCheckCallback>
+        	<negativeCheckCallback>com.dexprotector.detector.envchecks.MainActivity.negativeDebugCheck</negativeCheckCallback>
+        	<probeMethod>com.dexprotector.detector.envchecks.MainActivity.doProbe</probeMethod>
+    	</debug>
+      	<emulator>
+        	<positiveCheckCallback>com.dexprotector.detector.envchecks.MainActivity.positiveEmulatorCheck</positiveCheckCallback>
+        	<negativeCheckCallback>com.dexprotector.detector.envchecks.MainActivity.negativeEmulatorCheck</negativeCheckCallback>
+        	<probeMethod>com.dexprotector.detector.envchecks.MainActivity.doProbe</probeMethod>
+    	</emulator>
+    </detect>
+</dexprotector>
+
