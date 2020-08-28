@@ -3,6 +3,7 @@
 buildscript {
     repositories {
         jcenter()
+        google()
         flatDir dirs: '/Users/developer/DexProtector'
     }
     dependencies {
@@ -17,6 +18,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        google()
     }
 }
 
