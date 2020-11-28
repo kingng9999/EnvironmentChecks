@@ -8,6 +8,7 @@
     <hideAccess/>
     <resourceEncryption nameObfucation="on"><assets/><res/></resourceEncryption>
     <detect>
+        <!-- for debugging purposes only -->
     	<trace>9</trace>
       	<root>
         	<positiveCheckCallback>com.dexprotector.detector.envchecks.MainActivity.positiveRootCheck</positiveCheckCallback>
