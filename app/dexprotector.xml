@@ -1,5 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <dexprotector>
+    <detect>
+        <root>
+            <positiveCheckCallback>com.dexprotector.detector.envchecks.Repo.positiveRootCheck</positiveCheckCallback>
+            <negativeCheckCallback>com.dexprotector.detector.envchecks.Repo.negativeRootCheck</negativeCheckCallback>
+            <probeMethod>com.dexprotector.detector.envchecks.Repo.doProbe</probeMethod>
+        </root>
+    </detect>
     <verbose>true</verbose>
     <optimize>false</optimize>
     <signMode>debug</signMode>	
@@ -7,48 +14,7 @@
     <classEncryption/>
     <hideAccess/>
     <resourceEncryption nameObfucation="on"><assets/><res/></resourceEncryption>
-    <detect>
-        <!-- for debugging purposes only -->
-    	<trace>9</trace>
-      	<root>
-        	<positiveCheckCallback>com.dexprotector.detector.envchecks.MainActivity.positiveRootCheck</positiveCheckCallback>
-        	<negativeCheckCallback>com.dexprotector.detector.envchecks.MainActivity.negativeRootCheck</negativeCheckCallback>
-        	<probeMethod>com.dexprotector.detector.envchecks.MainActivity.doProbe</probeMethod>
-    	</root>
-      	<debug>
-        	<positiveCheckCallback>com.dexprotector.detector.envchecks.MainActivity.positiveDebugCheck</positiveCheckCallback>
-        	<negativeCheckCallback>com.dexprotector.detector.envchecks.MainActivity.negativeDebugCheck</negativeCheckCallback>
-        	<probeMethod>com.dexprotector.detector.envchecks.MainActivity.doProbe</probeMethod>
-    	</debug>
-      	<emulator>
-        	<positiveCheckCallback>com.dexprotector.detector.envchecks.MainActivity.positiveEmulatorCheck</positiveCheckCallback>
-        	<negativeCheckCallback>com.dexprotector.detector.envchecks.MainActivity.negativeEmulatorCheck</negativeCheckCallback>
-        	<probeMethod>com.dexprotector.detector.envchecks.MainActivity.doProbe</probeMethod>
-    	</emulator>
-      	<customFirmware>
-        	<positiveCheckCallback>com.dexprotector.detector.envchecks.MainActivity.positiveCustomFirmwareCheck</positiveCheckCallback>
-        	<negativeCheckCallback>com.dexprotector.detector.envchecks.MainActivity.negativeCustomFirmwareCheck</negativeCheckCallback>
-        	<probeMethod>com.dexprotector.detector.envchecks.MainActivity.doProbe</probeMethod>
-    	</customFirmware>
-      	<xposed>
-        	<positiveCheckCallback>com.dexprotector.detector.envchecks.MainActivity.positiveXposedCheck</positiveCheckCallback>
-        	<negativeCheckCallback>com.dexprotector.detector.envchecks.MainActivity.negativeXposedCheck</negativeCheckCallback>
-        	<probeMethod>com.dexprotector.detector.envchecks.MainActivity.doProbe</probeMethod>
-    	</xposed>
-      	<integrity>
-        	<positiveCheckCallback>com.dexprotector.detector.envchecks.MainActivity.positiveIntegrityCheck</positiveCheckCallback>
-        	<negativeCheckCallback>com.dexprotector.detector.envchecks.MainActivity.negativeIntegrityCheck</negativeCheckCallback>
-        	<probeMethod>com.dexprotector.detector.envchecks.MainActivity.doProbe</probeMethod>
-    	</integrity>
-      	<wirelessSecurity>
-        	<positiveCheckCallback>com.dexprotector.detector.envchecks.MainActivity.positiveWirelessSecurityCheck</positiveCheckCallback>
-        	<negativeCheckCallback>com.dexprotector.detector.envchecks.MainActivity.negativeWirelessSecurityCheck</negativeCheckCallback>
-        	<probeMethod>com.dexprotector.detector.envchecks.MainActivity.doProbe</probeMethod>
-        	<filters>
-        		<filter>regex:M..onald's.*</filter>
-        	</filters>
-    	</wirelessSecurity>
-    </detect>
+
 
 </dexprotector>
 

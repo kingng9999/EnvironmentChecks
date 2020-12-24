@@ -4,9 +4,10 @@ buildscript {
     repositories {
         jcenter()
         google()
-        flatDir dirs: '/Users/developer/DexProtector'
+        flatDir { dirs "./dexprotector" }
     }
     dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72"
         classpath 'com.android.tools.build:gradle:4.0.0'
         classpath ':dexprotector-gradle-plugin'
         classpath ':dexprotector'
